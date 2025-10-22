@@ -1,0 +1,68 @@
+@use '../utils' as *;
+
+.header {
+	@include base-animation(background-color, border-color);
+
+	position: fixed;
+	inset-block-start: 0;
+	inset-inline: 0;
+	z-index: var(--z-header);
+	padding-block: rem(30);
+	border-block-end: rem(1) solid transparent;
+
+	&.is-fix {
+		background-color: color(--color-bg-dark-primary);
+		border-color: color(--color-stroke-primary);
+	}
+
+	@include tablet {
+		padding-block: rem(20);
+	}
+
+	@include mobile {
+		padding-block: rem(16);
+	}
+
+	&__body {
+		display: grid;
+		align-items: center;
+		grid-template-columns: minmax(rem(200), 1fr) auto minmax(rem(200), 1fr);
+		column-gap: rem(20);
+
+		@include tablet {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	&__logo {
+		display: flex;
+	}
+
+	&__nav {
+		justify-self: center;
+
+		@include tablet {
+			display: none;
+		}
+	}
+
+	&__action {
+		display: flex;
+		justify-content: end;
+	}
+
+	&__button {
+		@include tablet {
+			display: none;
+		}
+	}
+
+	&__burger {
+		flex-shrink: 0;
+
+		@include tablet-above {
+			display: none;
+		}
+	}
+}

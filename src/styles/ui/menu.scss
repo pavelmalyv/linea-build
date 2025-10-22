@@ -1,0 +1,25 @@
+@use '../utils' as *;
+
+.menu {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: rem(4) rem(30);
+	flex-wrap: wrap;
+
+	&_vertical {
+		flex-direction: column;
+		row-gap: rem(20);
+	}
+
+	&__link {
+		@include base-animation(color);
+
+		color: color(--color-text-light-primary);
+		line-height: 1.8;
+
+		@include hover {
+			color: color(--color-accent-primary);
+		}
+	}
+}

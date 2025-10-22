@@ -8,6 +8,87 @@
 		<link rel="stylesheet" href="/src/styles/main.scss" />
 	</head>
 	<body>
+		<header class="header" data-js-header>
+			<div class="container header__body">
+				<div class="header__logo">
+					<a class="logo" href="/">
+						<img
+							class="logo__img"
+							src="img/logo.svg"
+							alt="LineaBuild"
+							width="170"
+							height="38"
+							loading="lazy"
+						/>
+					</a>
+				</div>
+				<nav class="header__nav">
+					<ul class="menu">
+						<li>
+							<a class="menu__link" href="#">Главная</a>
+						</li>
+						<li>
+							<a class="menu__link" href="#">Услуги</a>
+						</li>
+						<li>
+							<a class="menu__link" href="#">О нас</a>
+						</li>
+						<li>
+							<a class="menu__link" href="#">Портфолио</a>
+						</li>
+						<li>
+							<a class="menu__link" href="#">Отзывы</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="header__action">
+					<button class="header__button button">Оставить заявку</button>
+					<button class="header__burger burger" data-js-open-dialog-id="dialog-menu">
+						<span class="visually-hidden">Меню</span>
+						<span class="burger__inner">
+							<span class="burger__line"></span>
+							<span class="burger__line burger__line_center"></span>
+							<span class="burger__line"></span>
+						</span>
+					</button>
+				</div>
+			</div>
+		</header>
+
+		<sl-dialog id="dialog-menu" class="dialog">
+			<span slot="label" class="visually-hidden">Меню</span>
+			<div class="dialog__body dialog-menu">
+				<a class="logo" href="/" data-js-close-current-dialog>
+					<img
+						class="logo__img"
+						src="img/logo.svg"
+						alt="LineaBuild"
+						width="170"
+						height="38"
+						loading="lazy"
+					/>
+				</a>
+				<ul class="menu menu_vertical">
+					<li>
+						<a class="menu__link" href="#" data-js-close-current-dialog>Главная</a>
+					</li>
+					<li>
+						<a class="menu__link" href="#" data-js-close-current-dialog>Услуги</a>
+					</li>
+					<li>
+						<a class="menu__link" href="#" data-js-close-current-dialog>О нас</a>
+					</li>
+					<li>
+						<a class="menu__link" href="#" data-js-close-current-dialog>Портфолио</a>
+					</li>
+					<li>
+						<a class="menu__link" href="#" data-js-close-current-dialog>Отзывы</a>
+					</li>
+				</ul>
+				<button class="button">Оставить заявку</button>
+			</div>
+		</sl-dialog>
+
 		<script type="module" src="/src/scripts/main.ts"></script>
 	</body>
 </html>

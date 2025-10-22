@@ -1,0 +1,13 @@
+@use '../utils' as *;
+
+.logo {
+	display: inline-flex;
+
+	&__img {
+		inline-size: rem(170);
+
+		@include mobile {
+			inline-size: rem(150);
+		}
+	}
+}

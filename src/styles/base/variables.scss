@@ -5,9 +5,10 @@
 	--font-secondary: 'Manrope', sans-serif;
 
 	// colors
-
+	--color-accent-primary: 58 122 254;
 	--color-text-light-primary: 255 255 255;
 	--color-bg-dark-primary: 2 2 2;
+	--color-bg-light-primary: 255 255 255;
 
 	// typography
 
@@ -18,7 +19,20 @@
 	--container-padding-x: #{rem(40)};
 	--container-inline: #{rem(1216)};
 
+	@include tablet {
+		--container-padding-x: #{rem(20)};
+	}
+
+	@include mobile {
+		--container-padding-x: #{rem(16)};
+	}
+
 	// z-index
 
 	--z-header: 1000;
+	--z-dialog: 1100;
+
+	// radius
+
+	--radius-lg: #{rem(50)};
 }

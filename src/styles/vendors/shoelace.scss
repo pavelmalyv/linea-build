@@ -1,0 +1,5 @@
+@forward '@shoelace-style/shoelace/dist/themes/light';
+
+:root {
+	--sl-z-index-dialog: var(--z-dialog);
+}
