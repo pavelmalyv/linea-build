@@ -1,0 +1,28 @@
+@use './functions' as *;
+
+$tablet: 1024;
+$mobile: 768;
+
+@mixin tablet-above {
+	@media (width > rem($tablet)) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (width <= rem($tablet)) {
+		@content;
+	}
+}
+
+@mixin mobile-above {
+	@media (width > rem($mobile)) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media (width <= rem($mobile)) {
+		@content;
+	}
+}

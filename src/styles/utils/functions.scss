@@ -1,0 +1,11 @@
+@function rem($px) {
+	@return calc($px / 16) * 1rem;
+}
+
+@function color($name, $alpha: false) {
+	@if $alpha == false {
+		@return rgb(var(#{$name}));
+	} @else {
+		@return rgb(var(#{$name}) / #{$alpha});
+	}
+}

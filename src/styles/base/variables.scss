@@ -1,0 +1,24 @@
+@use '../utils' as *;
+
+:root {
+	--font-primary: 'Montserrat', sans-serif;
+	--font-secondary: 'Manrope', sans-serif;
+
+	// colors
+
+	--color-text-light-primary: 255 255 255;
+	--color-bg-dark-primary: 2 2 2;
+
+	// typography
+
+	--text-base: #{rem(16)};
+
+	// container
+
+	--container-padding-x: #{rem(40)};
+	--container-inline: #{rem(1216)};
+
+	// z-index
+
+	--z-header: 1000;
+}

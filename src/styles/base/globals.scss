@@ -1,0 +1,17 @@
+@use '../utils' as *;
+
+html {
+	scrollbar-gutter: stable;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--font-primary);
+	font-size: var(--text-base);
+	color: color(--color-text-light-primary);
+	background-color: color(--color-bg-dark-primary);
+}
+
+:not(:defined) {
+	visibility: hidden;
+}
