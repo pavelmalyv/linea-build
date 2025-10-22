@@ -9,10 +9,12 @@
 	--color-text-light-primary: 255 255 255;
 	--color-bg-dark-primary: 2 2 2;
 	--color-bg-light-primary: 255 255 255;
+	--color-stroke-primary: 51 51 51;
+	--color-dark-placeholder: 24 24 24;
 
 	// typography
 
-	--text-base: #{rem(16)};
+	--text-base: #{fluid-rem(16, 14)};
 
 	// container
 
@@ -29,6 +31,8 @@
 
 	// z-index
 
+	--z-base: 0;
+	--z-layer-1: 100;
 	--z-header: 1000;
 	--z-dialog: 1100;
 

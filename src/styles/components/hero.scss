@@ -1,0 +1,148 @@
+@use '../utils' as *;
+
+.hero {
+	position: relative;
+	border-block-end: rem(1) solid color(--color-stroke-primary);
+	overflow: hidden;
+
+	&::before {
+		content: '';
+		position: absolute;
+		inset-block-end: 0;
+		inset-inline-start: 0;
+		z-index: var(--z-base);
+		inline-size: fluid-rem(388, 215);
+		aspect-ratio: 388 / 671;
+		background-image: url('/img/hero/lines-start.svg');
+		background-repeat: no-repeat;
+		background-size: 100%;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		inset-block-start: 0;
+		inset-inline-end: 0;
+		z-index: var(--z-base);
+		inline-size: fluid-rem(447, 248);
+		aspect-ratio: 447 / 600;
+		background-image: url('/img/hero/lines-end.svg');
+		background-repeat: no-repeat;
+		background-size: 100%;
+	}
+
+	&__main {
+		@include flex-center;
+
+		position: relative;
+		z-index: var(--z-layer-1);
+		min-block-size: 100vh;
+		padding-block: rem(200);
+
+		@include tablet {
+			padding-block: rem(110);
+		}
+	}
+
+	&__body {
+		margin-block: auto;
+		position: relative;
+		max-inline-size: fluid-rem(790, 350);
+		text-align: center;
+	}
+
+	&__images-start {
+		position: absolute;
+		inset-block-start: 50%;
+		inset-inline-start: 0;
+		translate: 0 -50%;
+		margin-block-start: rem(50);
+
+		@include laptop {
+			inset-inline-start: var(--container-padding-x);
+		}
+
+		@include tablet {
+			inset-block-start: rem(110);
+			translate: initial;
+			margin-block-start: initial;
+		}
+	}
+
+	&__images-end {
+		position: absolute;
+		inset-block-start: 50%;
+		inset-inline-end: 0;
+		translate: 0 -50%;
+		margin-block-start: rem(50);
+
+		@include laptop {
+			inset-inline-end: var(--container-padding-x);
+		}
+	}
+
+	&__images-img {
+		filter: brightness(90%);
+		object-fit: cover;
+
+		@include tablet {
+			display: none;
+		}
+
+		&_primary {
+			inline-size: rem(241);
+			aspect-ratio: 241 / 318;
+
+			@include laptop {
+				inline-size: rem(193);
+			}
+		}
+
+		&_secondary {
+			inline-size: rem(205);
+			aspect-ratio: 205 / 249;
+			margin-inline-start: 39%;
+			margin-block-start: -46%;
+
+			@include laptop {
+				inline-size: rem(164);
+			}
+		}
+
+		&_tertiary {
+			inline-size: rem(258);
+			aspect-ratio: 278 / 358;
+			margin-inline-start: auto;
+
+			@include laptop {
+				inline-size: rem(223);
+			}
+		}
+
+		&_quaternary {
+			inline-size: rem(283);
+			aspect-ratio: 293 / 187;
+			margin-inline-start: -40%;
+			margin-block-start: -38%;
+
+			@include laptop {
+				inline-size: rem(235);
+			}
+		}
+	}
+
+	&__title {
+		margin-block-end: rem(16);
+
+		@include mobile {
+			margin-block-end: rem(20);
+		}
+	}
+
+	&__subtitle {
+		margin-block-end: rem(30);
+		margin-inline: auto;
+		max-inline-size: rem(470);
+		line-height: 1.8;
+	}
+}

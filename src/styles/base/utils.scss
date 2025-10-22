@@ -10,3 +10,9 @@
 .visually-hidden {
 	@include visually-hidden;
 }
+
+.h1 {
+	font-family: var(--font-secondary);
+	font-size: fluid-rem(50, 26);
+	line-height: 1.1;
+}
