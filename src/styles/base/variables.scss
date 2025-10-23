@@ -7,10 +7,15 @@
 	// colors
 	--color-accent-primary: 58 122 254;
 	--color-text-light-primary: 255 255 255;
+	--color-text-light-secondary: 107 107 107;
+	--color-text-dark-primary: 2 2 2;
 	--color-bg-dark-primary: 2 2 2;
+	--color-bg-dark-secondary: 242 241 238;
 	--color-bg-light-primary: 255 255 255;
 	--color-stroke-primary: 51 51 51;
 	--color-stroke-secondary: 98 98 98;
+	--color-stroke-tertiary: 216 216 216;
+	--color-light-placeholder: 226 226 226;
 	--color-dark-placeholder: 24 24 24;
 
 	// typography
@@ -40,4 +45,12 @@
 	// radius
 
 	--radius-lg: #{rem(50)};
+
+	// section
+
+	--section-padding-y: #{rem(85)};
+
+	@include mobile {
+		--section-padding-y: #{rem(60)};
+	}
 }

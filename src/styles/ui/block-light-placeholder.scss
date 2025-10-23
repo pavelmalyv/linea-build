@@ -1,0 +1,5 @@
+@use '../utils' as *;
+
+.block-light-placeholder {
+	background-color: color(--color-light-placeholder);
+}

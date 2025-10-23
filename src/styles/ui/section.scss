@@ -1,0 +1,27 @@
+@use '../utils' as *;
+
+.section {
+	background-color: color(--color-bg-dark-secondary);
+	color: color(--color-text-dark-primary);
+
+	&__inner {
+		--count: 3;
+
+		padding-block: var(--section-padding-y);
+		background: repeating-linear-gradient(
+			to right,
+			color(--color-stroke-tertiary) 0,
+			color(--color-stroke-tertiary) rem(1),
+			transparent rem(1),
+			transparent calc((100% / var(--count)) - (rem(1) / var(--count)))
+		);
+
+		@include tablet {
+			--count: 2;
+		}
+
+		@include mobile {
+			--count: 1;
+		}
+	}
+}
