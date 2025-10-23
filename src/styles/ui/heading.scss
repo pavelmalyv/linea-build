@@ -1,0 +1,13 @@
+@use '../utils' as *;
+
+.heading {
+	margin-block-end: rem(29);
+
+	@include tablet {
+		margin-block-end: rem(25);
+	}
+
+	@include mobile {
+		margin-block-end: rem(20);
+	}
+}
