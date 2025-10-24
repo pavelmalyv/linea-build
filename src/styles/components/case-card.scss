@@ -1,0 +1,18 @@
+@use '../utils' as *;
+
+.case-card {
+	inline-size: 100%;
+
+	&__img {
+		inline-size: 100%;
+		margin-block-end: rem(35);
+
+		@include mobile {
+			margin-block-end: rem(26);
+		}
+	}
+
+	&__title {
+		margin-block-end: rem(19);
+	}
+}

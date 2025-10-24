@@ -1,0 +1,34 @@
+@use '../utils' as *;
+
+.portfolio {
+	overflow: hidden;
+
+	&__heading {
+		display: flex;
+		align-items: start;
+		justify-content: space-between;
+		margin-block-end: rem(29);
+		column-gap: rem(20);
+
+		@include mobile {
+			row-gap: rem(14);
+			align-items: initial;
+			flex-direction: column;
+		}
+	}
+
+	&__slider {
+		margin-inline: rem(-19);
+	}
+
+	&__slide {
+		--count-slides: 2;
+
+		padding-inline: rem(19);
+		inline-size: calc(100% / var(--count-slides));
+
+		@include mobile {
+			--count-slides: 1;
+		}
+	}
+}

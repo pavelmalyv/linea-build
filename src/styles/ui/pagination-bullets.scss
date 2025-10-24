@@ -1,0 +1,20 @@
+@use '../utils' as *;
+
+.pagination-bullets {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: rem(6) rem(8);
+
+	&__bullet {
+		@include square(rem(7));
+		@include base-animation(background-color);
+
+		border-radius: 100%;
+		background-color: color(--color-stroke-tertiary);
+
+		&_action {
+			background-color: color(--color-bg-dark-primary);
+		}
+	}
+}
