@@ -1,0 +1,61 @@
+@use '../utils' as *;
+
+.reviews {
+	&__main {
+		display: flex;
+		align-items: center;
+
+		@include mobile {
+			flex-direction: column-reverse;
+		}
+	}
+
+	&__body {
+		flex: rem(695);
+		margin-inline-end: rem(-71);
+		min-inline-size: rem(1);
+
+		@include tablet {
+			margin-inline-end: rem(-100);
+		}
+
+		@include mobile {
+			width: 100%;
+			flex: initial;
+			margin-inline-end: initial;
+		}
+	}
+
+	&__slider {
+		margin-block-end: rem(22);
+		background-color: color(--color-bg-light-primary);
+	}
+
+	&__slide {
+		height: initial;
+	}
+
+	&__buttons {
+		padding-inline: rem(52);
+
+		@include tablet {
+			padding-inline: rem(36);
+		}
+
+		@include mobile {
+			padding-inline: rem(20);
+		}
+	}
+
+	&__image {
+		flex: rem(592);
+		min-inline-size: rem(420);
+
+		@include mobile {
+			flex: initial;
+			height: rem(200);
+			object-fit: cover;
+			min-inline-size: initial;
+		}
+	}
+}
