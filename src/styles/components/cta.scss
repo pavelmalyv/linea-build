@@ -1,0 +1,28 @@
+@use '../utils' as *;
+
+.cta {
+	padding-block: rem(90);
+	background-image: url('/img/city.svg');
+	background-size: auto calc(100% - rem(22));
+	background-repeat: no-repeat;
+	background-position: bottom right rem(-11);
+	border-block-end: rem(1) solid color(--color-stroke-primary);
+
+	@include tablet {
+		background-color: color(--color-bg-dark-primary, 0.45);
+		background-blend-mode: darken;
+	}
+
+	@include mobile {
+		padding-block: rem(70);
+		background-position-x: center;
+	}
+
+	&__title {
+		margin-block-end: rem(25);
+	}
+
+	&__body {
+		max-inline-size: fluid-rem(485, 285);
+	}
+}
