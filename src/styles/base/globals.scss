@@ -3,6 +3,7 @@
 html {
 	scrollbar-gutter: stable;
 	scroll-behavior: smooth;
+	scroll-padding-block-start: var(--header-height);
 }
 
 body {

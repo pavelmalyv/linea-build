@@ -7,8 +7,11 @@
 	inset-block-start: 0;
 	inset-inline: 0;
 	z-index: var(--z-header);
-	padding-block: rem(30);
+	display: flex;
+	align-items: center;
+	padding-block: rem(22);
 	border-block-end: rem(1) solid transparent;
+	min-block-size: var(--header-height);
 
 	&.is-fix {
 		background-color: color(--color-bg-dark-primary);
@@ -16,11 +19,11 @@
 	}
 
 	@include tablet {
-		padding-block: rem(20);
+		padding-block: rem(16);
 	}
 
 	@include mobile {
-		padding-block: rem(16);
+		padding-block: rem(14);
 	}
 
 	&__body {

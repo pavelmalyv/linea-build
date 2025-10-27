@@ -53,4 +53,16 @@
 	@include mobile {
 		--section-padding-y: #{rem(60)};
 	}
+
+	// header
+
+	--header-height: #{rem(108)};
+
+	@include tablet {
+		--header-height: #{rem(84)};
+	}
+
+	@include mobile {
+		--header-height: #{rem(78)};
+	}
 }
