@@ -1,0 +1,80 @@
+@use '../utils' as *;
+
+.footer {
+	padding-block: rem(67) rem(44);
+
+	@include tablet {
+		padding-block-start: rem(54);
+	}
+
+	@include mobile {
+		padding-block-start: rem(44);
+	}
+
+	&__body {
+		display: flex;
+		column-gap: rem(40);
+
+		@include mobile {
+			flex-direction: column;
+		}
+	}
+
+	&__start {
+		flex: 2;
+
+		@include mobile {
+			display: contents;
+		}
+	}
+
+	&__navigation {
+		flex: 1;
+
+		@include mobile {
+			flex: initial;
+			margin-block-end: rem(40);
+		}
+	}
+
+	&__logo {
+		margin-block-end: rem(30);
+
+		@include mobile {
+			margin-block-end: rem(24);
+		}
+	}
+
+	&__description {
+		line-height: 1.8;
+		max-inline-size: rem(500);
+		margin-block-end: rem(58);
+
+		@include tablet {
+			max-inline-size: rem(380);
+		}
+
+		@include mobile {
+			max-inline-size: rem(500);
+			margin-block-end: rem(40);
+		}
+	}
+
+	&__socials {
+		margin-block-end: rem(37);
+
+		@include mobile {
+			order: 1;
+			margin-block-end: rem(28);
+		}
+	}
+
+	&__legal {
+		line-height: 1.8;
+		font-size: inherit;
+
+		@include mobile {
+			order: 2;
+		}
+	}
+}

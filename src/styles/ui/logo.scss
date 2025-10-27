@@ -1,13 +1,27 @@
 @use '../utils' as *;
 
 .logo {
+	--inline-size: #{rem(170)};
+
 	display: inline-flex;
 
-	&__img {
-		inline-size: rem(170);
+	@include mobile {
+		inline-size: rem(150);
+	}
+
+	&_large {
+		--inline-size: #{rem(230)};
+
+		@include tablet {
+			--inline-size: #{rem(200)};
+		}
 
 		@include mobile {
-			inline-size: rem(150);
+			inline-size: rem(170);
 		}
+	}
+
+	&__img {
+		inline-size: var(--inline-size);
 	}
 }

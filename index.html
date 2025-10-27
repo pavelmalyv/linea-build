@@ -10,18 +10,16 @@
 	<body>
 		<header class="header" data-js-header>
 			<div class="container header__body">
-				<div class="header__logo">
-					<a class="logo" href="/">
-						<img
-							class="logo__img"
-							src="img/logo.svg"
-							alt="LineaBuild"
-							width="170"
-							height="38"
-							loading="lazy"
-						/>
-					</a>
-				</div>
+				<a class="header__logo logo" href="/">
+					<img
+						class="logo__img"
+						src="img/logo.svg"
+						alt="LineaBuild"
+						width="170"
+						height="38"
+						loading="lazy"
+					/>
+				</a>
 				<nav class="header__nav">
 					<ul class="menu">
 						<li>
@@ -440,6 +438,73 @@
 					</div>
 				</div>
 			</section>
+			<footer class="footer">
+				<div class="container footer__body">
+					<div class="footer__start">
+						<a class="footer__logo logo logo_large" href="/">
+							<img
+								class="logo__img"
+								src="img/logo.svg"
+								alt="LineaBuild"
+								width="170"
+								height="38"
+								loading="lazy"
+							/>
+						</a>
+						<p class="footer__description">
+							Откройте для себя вдохновляющие архитектурные решения, созданные с учётом вашего
+							уникального стиля.
+						</p>
+						<ul class="footer__socials socials">
+							<li>
+								<a class="socials__link" href="#" target="_blank">
+									<span class="visually-hidden">Linkedin</span>
+									<svg class="socials__icon icon" aria-hidden="true">
+										<use href="sprite.svg#linkedin" x="0" y="0" />
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a class="socials__link" href="#" target="_blank">
+									<span class="visually-hidden">TikTok</span>
+									<svg class="socials__icon icon" aria-hidden="true">
+										<use href="sprite.svg#tiktok" x="0" y="0" />
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a class="socials__link" href="#" target="_blank">
+									<span class="visually-hidden">Dribbble</span>
+									<svg class="socials__icon icon" aria-hidden="true">
+										<use href="sprite.svg#dribbble" x="0" y="0" />
+									</svg>
+								</a>
+							</li>
+						</ul>
+						<small class="footer__legal">© 2025 LineaBuild. Все права защищены.</small>
+					</div>
+					<nav class="footer__navigation navigation">
+						<h2 class="navigation__title h5">Навигация</h2>
+						<ul class="navigation__list">
+							<li>
+								<a class="navigation__link" href="#">Главная</a>
+							</li>
+							<li>
+								<a class="navigation__link" href="#">Услуги</a>
+							</li>
+							<li>
+								<a class="navigation__link" href="#">О нас</a>
+							</li>
+							<li>
+								<a class="navigation__link" href="#">Портфолио</a>
+							</li>
+							<li>
+								<a class="navigation__link" href="#">Отзывы</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</footer>
 		</main>
 
 		<sl-dialog id="dialog-menu" class="dialog">

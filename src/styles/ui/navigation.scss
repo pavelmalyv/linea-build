@@ -1,0 +1,24 @@
+@use '../utils' as *;
+
+.navigation {
+	&__title {
+		margin-block-end: rem(20);
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		row-gap: rem(18);
+	}
+
+	&__link {
+		@include base-animation(color);
+
+		line-height: 1.8;
+		color: color(--color-text-light-primary);
+
+		@include hover {
+			color: color(--color-accent-primary);
+		}
+	}
+}
