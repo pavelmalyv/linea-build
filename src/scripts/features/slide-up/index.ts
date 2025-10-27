@@ -1,0 +1,1 @@
+export { SlideUpCollections } from './SlideUp';
