@@ -20,7 +20,7 @@
 		}
 
 		@include mobile {
-			width: 100%;
+			inline-size: 100%;
 			flex: initial;
 			margin-inline-end: initial;
 		}
@@ -32,7 +32,7 @@
 	}
 
 	&__slide {
-		height: initial;
+		block-size: initial;
 	}
 
 	&__buttons {
@@ -53,7 +53,7 @@
 
 		@include mobile {
 			flex: initial;
-			height: rem(200);
+			block-size: rem(200);
 			object-fit: cover;
 			min-inline-size: initial;
 		}
