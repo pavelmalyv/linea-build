@@ -11,7 +11,7 @@
 	align-items: center;
 	padding-block: rem(22);
 	border-block-end: rem(1) solid transparent;
-	min-block-size: var(--header-height);
+	min-block-size: var(--header-block-size);
 
 	&.is-fix {
 		background-color: color(--color-bg-dark-primary);
