@@ -56,13 +56,13 @@
 
 	// header
 
-	--header-height: #{rem(108)};
+	--header-block-size: #{rem(108)};
 
 	@include tablet {
-		--header-height: #{rem(84)};
+		--header-block-size: #{rem(84)};
 	}
 
 	@include mobile {
-		--header-height: #{rem(78)};
+		--header-block-size: #{rem(78)};
 	}
 }
