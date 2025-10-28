@@ -1,0 +1,53 @@
+@use '../utils' as *;
+
+.about {
+	&__main {
+		display: flex;
+		align-items: center;
+		margin-block-end: rem(68);
+
+		@include mobile {
+			display: block;
+		}
+	}
+
+	&__image {
+		flex: rem(752);
+		min-inline-size: rem(530);
+
+		@include mobile {
+			block-size: rem(200);
+			object-fit: cover;
+			min-inline-size: initial;
+		}
+	}
+
+	&__body {
+		flex: rem(695);
+		padding-block: rem(87) rem(75);
+		padding-inline: rem(73);
+		background-color: color(--color-bg-light-primary);
+		margin-inline-start: rem(-232);
+
+		@include tablet {
+			padding-inline: rem(40);
+			padding-block: rem(50) rem(60);
+		}
+
+		@include mobile {
+			padding-block: rem(32) rem(30);
+			padding-inline: rem(20);
+			margin-inline-start: initial;
+		}
+	}
+
+	&__title {
+		margin-block-end: rem(18);
+	}
+
+	&__description {
+		max-inline-size: rem(522);
+		line-height: 1.8;
+		color: color(--color-text-light-secondary);
+	}
+}

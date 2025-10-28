@@ -1,0 +1,38 @@
+@use '../utils' as *;
+
+.dialog {
+	--width: 100%;
+	--header-spacing-x: var(--container-padding-x);
+	--header-spacing-y: #{rem(21)};
+	--body-spacing: var(--container-padding-x);
+
+	@include mobile {
+		--header-spacing-y: #{rem(18)};
+	}
+
+	&__body {
+		min-block-size: 100%;
+	}
+
+	&::part(title) {
+		padding-inline: var(--header-spacing-x);
+		padding-block: var(--header-spacing-y);
+	}
+
+	&::part(header-actions) {
+		padding-inline: var(--header-spacing-x);
+		padding-block: var(--header-spacing-y);
+	}
+
+	&::part(close-button) {
+		font-size: rem(26);
+	}
+
+	&::part(panel) {
+		block-size: 100%;
+		background-color: color(--color-bg-dark-primary);
+		max-inline-size: initial;
+		max-block-size: initial;
+		border-radius: initial;
+	}
+}

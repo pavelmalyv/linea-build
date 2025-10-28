@@ -1,0 +1,17 @@
+@use '../utils' as *;
+
+.numbers {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	gap: rem(40) rem(25);
+
+	&__item {
+		text-align: center;
+	}
+
+	&__description {
+		color: color(--color-text-light-secondary);
+		line-height: 1.8;
+	}
+}

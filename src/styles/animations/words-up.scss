@@ -1,0 +1,10 @@
+.words-up {
+	display: inline-block;
+	overflow: hidden;
+	padding-block: 0.1em;
+	margin-block: -0.1em;
+
+	&__word {
+		display: inline-block;
+	}
+}

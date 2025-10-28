@@ -1,0 +1,31 @@
+@use '../utils' as *;
+
+.burger {
+	@include square(rem(44));
+	@include flex-center(true);
+	@include base-animation(color);
+
+	background: transparent;
+	color: color(--color-text-light-primary);
+
+	@include hover {
+		color: color(--color-accent-primary);
+	}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		block-size: 35%;
+		inline-size: 55%;
+	}
+
+	&__line {
+		block-size: rem(2);
+		inline-size: 100%;
+		background-color: currentcolor;
+
+		&_center {
+			margin-block: auto;
+		}
+	}
+}

@@ -1,0 +1,17 @@
+@use '../utils' as *;
+
+.link {
+	@include base-animation(text-decoration-color);
+
+	font-family: var(--font-secondary);
+	font-weight: 500;
+	color: inherit;
+	text-decoration: underline;
+	text-decoration-color: color(--color-stroke-secondary);
+	font-size: fluid-rem(16, 14);
+	line-height: 1.1;
+
+	&:not(&_not-hover):hover {
+		text-decoration-color: transparent;
+	}
+}

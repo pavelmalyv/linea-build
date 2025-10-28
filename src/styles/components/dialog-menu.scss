@@ -1,0 +1,8 @@
+@use '../utils' as *;
+
+.dialog-menu {
+	@include flex-center;
+
+	flex-direction: column;
+	row-gap: rem(50);
+}

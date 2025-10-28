@@ -1,0 +1,41 @@
+@use './functions' as *;
+
+$laptop: 1380;
+$tablet: 1024;
+$mobile: 768;
+
+@mixin laptop-above {
+	@media (width > rem($laptop)) {
+		@content;
+	}
+}
+
+@mixin laptop {
+	@media (width <= rem($laptop)) {
+		@content;
+	}
+}
+
+@mixin tablet-above {
+	@media (width > rem($tablet)) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (width <= rem($tablet)) {
+		@content;
+	}
+}
+
+@mixin mobile-above {
+	@media (width > rem($mobile)) {
+		@content;
+	}
+}
+
+@mixin mobile {
+	@media (width <= rem($mobile)) {
+		@content;
+	}
+}

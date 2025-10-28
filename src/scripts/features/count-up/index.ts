@@ -1,0 +1,1 @@
+export { CountUpCollections } from './CountUp';

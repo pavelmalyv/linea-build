@@ -1,0 +1,23 @@
+@use '../utils' as *;
+
+.button {
+	@include base-animation(background-color, color);
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-block-size: rem(46);
+	padding-block: rem(6);
+	padding-inline: rem(24);
+	background-color: color(--color-bg-light-primary);
+	border: rem(1) solid color(--color-bg-light-primary);
+	border-radius: var(--radius-lg);
+	line-height: 1.5;
+	font-weight: 500;
+	color: color(--color-bg-dark-primary);
+
+	@include hover {
+		background-color: transparent;
+		color: color(--color-bg-light-primary);
+	}
+}

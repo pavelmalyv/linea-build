@@ -1,0 +1,84 @@
+@use '../utils' as *;
+
+.services {
+	padding-block-start: rem(40);
+
+	@include tablet {
+		padding-block-start: rem(35);
+	}
+
+	@include mobile {
+		padding-block-start: rem(30);
+	}
+
+	&__main {
+		border-block-start: rem(1) solid color(--color-stroke-primary);
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		border-inline-start: rem(1) solid color(--color-stroke-primary);
+	}
+
+	&__item {
+		flex: 1 0 calc(100% / 3);
+
+		@include tablet {
+			flex: 1 0 calc(100% / 2);
+		}
+
+		@include mobile {
+			flex: 1 0 100%;
+		}
+	}
+
+	&__link {
+		@include base-animation(background-color);
+
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		padding-block: rem(67) rem(108);
+		padding-inline: rem(28);
+		border-inline-end: rem(1) solid color(--color-stroke-primary);
+		border-block-end: rem(1) solid color(--color-stroke-primary);
+		color: color(--color-text-light-primary);
+
+		@include hover {
+			background-color: color(--color-bg-light-primary, 0.08);
+		}
+
+		@include tablet {
+			padding-block: rem(50) rem(80);
+			padding-inline: rem(24);
+		}
+
+		@include mobile {
+			padding-block: rem(42) rem(70);
+			padding-inline: rem(18);
+		}
+	}
+
+	&__icon {
+		inline-size: rem(50);
+		margin-block-end: rem(33);
+
+		@include tablet {
+			inline-size: rem(44);
+		}
+	}
+
+	&__title {
+		margin-block-end: rem(10);
+	}
+
+	&__description {
+		margin-block-end: rem(29);
+		line-height: 1.8;
+	}
+
+	&__details {
+		margin-block-start: auto;
+	}
+}

@@ -1,0 +1,35 @@
+@use '../utils' as *;
+
+.button-icon {
+	@include square(rem(66));
+	@include flex-center(true);
+	@include base-animation(border-color, background-color, color);
+
+	border: rem(1) solid color(--color-bg-dark-primary);
+	border-radius: 100%;
+	color: color(--color-text-light-primary);
+	background-color: color(--color-bg-dark-primary);
+
+	@include hover {
+		background-color: color(--color-accent-primary);
+		border-color: color(--color-accent-primary);
+	}
+
+	@include tablet {
+		@include square(rem(50));
+	}
+
+	@include mobile {
+		@include square(rem(44));
+	}
+
+	&:disabled {
+		background-color: transparent;
+		color: color(--color-stroke-tertiary);
+		border-color: color(--color-stroke-tertiary);
+	}
+
+	&__icon {
+		inline-size: 36%;
+	}
+}

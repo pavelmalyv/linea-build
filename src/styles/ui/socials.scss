@@ -1,0 +1,27 @@
+@use '../utils' as *;
+
+.socials {
+	display: flex;
+	flex-wrap: wrap;
+	gap: rem(10);
+
+	&__link {
+		@include square(rem(49));
+		@include flex-center(true);
+		@include base-animation(color, border-color, background-color);
+
+		border-radius: 100%;
+		border: rem(1) solid color(--color-stroke-primary);
+		color: color(--color-text-light-primary);
+
+		@include hover {
+			color: color(--color-text-dark-primary);
+			background-color: color(--color-bg-light-primary);
+			border-color: color(--color-bg-light-primary);
+		}
+	}
+
+	&__icon {
+		inline-size: 100%;
+	}
+}

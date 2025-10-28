@@ -1,0 +1,49 @@
+@mixin flex-center($isInline: false) {
+	@if $isInline {
+		display: inline-flex;
+	} @else {
+		display: flex;
+	}
+
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin square($size) {
+	aspect-ratio: 1;
+	inline-size: $size;
+	max-inline-size: 100%;
+}
+
+@mixin visually-hidden {
+	position: absolute;
+	inline-size: 1px;
+	block-size: 1px;
+	margin-block: -1px;
+	margin-inline: -1px;
+	border: 0;
+	padding-block: 0;
+	padding-inline: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	overflow: hidden;
+}
+
+@mixin hover {
+	@media (any-hover: hover) {
+		&:hover {
+			@content;
+		}
+	}
+
+	@media (any-hover: none) {
+		&:active {
+			@content;
+		}
+	}
+}
+
+@mixin base-animation($properties...) {
+	transition: 0.3s ease-out;
+	transition-property: $properties;
+}

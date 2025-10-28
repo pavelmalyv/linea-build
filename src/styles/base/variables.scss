@@ -1,0 +1,68 @@
+@use '../utils' as *;
+
+:root {
+	--font-primary: 'Montserrat', sans-serif;
+	--font-secondary: 'Manrope', sans-serif;
+
+	// colors
+	--color-accent-primary: 58 122 254;
+	--color-text-light-primary: 255 255 255;
+	--color-text-light-secondary: 107 107 107;
+	--color-text-dark-primary: 2 2 2;
+	--color-bg-dark-primary: 2 2 2;
+	--color-bg-dark-secondary: 242 241 238;
+	--color-bg-light-primary: 255 255 255;
+	--color-stroke-primary: 51 51 51;
+	--color-stroke-secondary: 98 98 98;
+	--color-stroke-tertiary: 216 216 216;
+	--color-light-placeholder: 226 226 226;
+	--color-dark-placeholder: 24 24 24;
+
+	// typography
+
+	--text-base: #{fluid-rem(16, 14)};
+
+	// container
+
+	--container-padding-x: #{rem(40)};
+	--container-inline: #{rem(1216)};
+
+	@include tablet {
+		--container-padding-x: #{rem(20)};
+	}
+
+	@include mobile {
+		--container-padding-x: #{rem(16)};
+	}
+
+	// z-index
+
+	--z-base: 0;
+	--z-layer-1: 100;
+	--z-header: 1000;
+	--z-dialog: 1100;
+
+	// radius
+
+	--radius-lg: #{rem(50)};
+
+	// section
+
+	--section-padding-y: #{rem(85)};
+
+	@include mobile {
+		--section-padding-y: #{rem(60)};
+	}
+
+	// header
+
+	--header-height: #{rem(108)};
+
+	@include tablet {
+		--header-height: #{rem(84)};
+	}
+
+	@include mobile {
+		--header-height: #{rem(78)};
+	}
+}

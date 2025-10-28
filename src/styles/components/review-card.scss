@@ -1,0 +1,36 @@
+@use '../utils' as *;
+
+.review-card {
+	display: flex;
+	flex-direction: column;
+	block-size: 100%;
+	padding-inline: rem(50);
+	padding-block: rem(50);
+	background-color: color(--color-bg-light-primary);
+
+	@include tablet {
+		padding-inline: rem(36);
+		padding-block: rem(36);
+	}
+
+	@include mobile {
+		padding-block: rem(26);
+		padding-inline: rem(20);
+	}
+
+	&__quote {
+		max-inline-size: rem(522);
+		margin-block-end: rem(40);
+		line-height: 1.8;
+		color: color(--color-text-light-secondary);
+	}
+
+	&__author {
+		margin-block-start: auto;
+	}
+
+	&__city {
+		line-height: 1.8;
+		color: color(--color-text-light-secondary);
+	}
+}

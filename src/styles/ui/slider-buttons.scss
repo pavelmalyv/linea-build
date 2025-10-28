@@ -1,0 +1,22 @@
+@use '../utils' as *;
+
+.slider-buttons {
+	display: flex;
+	align-items: center;
+	column-gap: rem(10);
+
+	@include mobile {
+		justify-content: space-between;
+		column-gap: rem(16);
+	}
+
+	&__button {
+		flex-shrink: 0;
+	}
+
+	&__pagination {
+		@include mobile-above {
+			display: none;
+		}
+	}
+}

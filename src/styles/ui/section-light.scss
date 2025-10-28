@@ -1,0 +1,9 @@
+@use '../utils' as *;
+
+.section-light {
+	padding-block: var(--section-padding-y);
+	border-block-start: rem(1) solid color(--color-stroke-tertiary);
+	border-block-end: rem(1) solid color(--color-stroke-tertiary);
+	background-color: color(--color-bg-light-primary);
+	color: color(--color-text-dark-primary);
+}

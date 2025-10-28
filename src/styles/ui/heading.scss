@@ -1,0 +1,41 @@
+@use '../utils' as *;
+
+.heading {
+	display: flex;
+	flex-direction: column;
+	row-gap: rem(10);
+
+	&:not(&_not-indent) {
+		margin-block-end: rem(29);
+
+		@include tablet {
+			margin-block-end: rem(25);
+		}
+
+		@include mobile {
+			margin-block-end: rem(20);
+		}
+	}
+
+	&_center {
+		text-align: center;
+
+		&:not(&_not-indent) {
+			margin-block-end: rem(59);
+
+			@include tablet {
+				margin-block-end: rem(40);
+			}
+
+			@include mobile {
+				margin-block-end: rem(28);
+			}
+		}
+	}
+
+	&__subtitle {
+		max-inline-size: rem(620);
+		line-height: 1.8;
+		color: color(--color-text-light-secondary);
+	}
+}

@@ -1,0 +1,1 @@
+export { ReviewsCollections } from './Reviews';
