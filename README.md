@@ -17,7 +17,7 @@
 
 ## Стек
 
-HTML5, SCSS, TypeScript, Shoelace, GSAP, ESLint, Stylelint, Prettier, Vite
+HTML5, SCSS, TypeScript, БЭМ, Shoelace, GSAP, ESLint, Stylelint, Prettier, Vite
 
 ## Запуск в режиме разработки
 
