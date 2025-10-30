@@ -48,8 +48,8 @@
 					</ul>
 				</nav>
 				<div class="header__action">
-					<button class="header__button button">Оставить заявку</button>
-					<button class="header__burger burger" data-js-open-dialog-id="dialog-menu">
+					<button type="button" class="header__button button">Оставить заявку</button>
+					<button type="button" class="header__burger burger" data-js-open-dialog-id="dialog-menu">
 						<span class="visually-hidden">Меню</span>
 						<span class="burger__inner">
 							<span class="burger__line"></span>
@@ -110,7 +110,7 @@
 							Откройте вдохновляющие архитектурные решения, созданные с&nbsp;учётом вашего стиля
 							и&nbsp;потребностей
 						</h2>
-						<button class="button">Оставить заявку</button>
+						<button type="button" class="button">Оставить заявку</button>
 					</div>
 				</div>
 			</section>
@@ -218,6 +218,7 @@
 						</div>
 						<div class="slider-buttons">
 							<button
+								type="button"
 								class="slider-buttons__button button-icon"
 								disabled
 								data-js-portfolio-slider-prev
@@ -231,7 +232,11 @@
 								class="slider-buttons__pagination pagination-bullets"
 								data-js-portfolio-slider-pagination
 							></div>
-							<button class="slider-buttons__button button-icon" data-js-portfolio-slider-next>
+							<button
+								type="button"
+								class="slider-buttons__button button-icon"
+								data-js-portfolio-slider-next
+							>
 								<span class="visually-hidden">Следующий слайд</span>
 								<svg class="button-icon__icon icon" aria-hidden="true">
 									<use href="sprite.svg#arrow-next" x="0" y="0" />
@@ -409,6 +414,7 @@
 								</div>
 								<div class="reviews__buttons slider-buttons">
 									<button
+										type="button"
 										class="slider-buttons__button button-icon"
 										disabled
 										data-js-reviews-slider-prev
@@ -422,7 +428,7 @@
 										class="slider-buttons__pagination pagination-bullets"
 										data-js-reviews-slider-pagination
 									></div>
-									<button class="button-icon" data-js-reviews-slider-next>
+									<button type="button" class="button-icon" data-js-reviews-slider-next>
 										<span class="visually-hidden">Следующий слайд</span>
 										<svg class="button-icon__icon icon" aria-hidden="true">
 											<use href="sprite.svg#arrow-next" x="0" y="0" />
@@ -448,7 +454,7 @@
 						<h2 class="cta__title h2" data-js-animation-words-up>
 							Готовы преобразить своё пространство?
 						</h2>
-						<button class="button">Оставить заявку</button>
+						<button type="button" class="button">Оставить заявку</button>
 					</div>
 				</div>
 			</section>
@@ -551,7 +557,7 @@
 						<a class="menu__link" href="#reviews" data-js-close-current-dialog>Отзывы</a>
 					</li>
 				</ul>
-				<button class="button">Оставить заявку</button>
+				<button type="button" class="button">Оставить заявку</button>
 			</div>
 		</sl-dialog>
 
