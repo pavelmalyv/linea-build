@@ -17,6 +17,11 @@ body {
 	visibility: hidden;
 }
 
+button,
+label {
+	cursor: pointer;
+}
+
 @media (prefers-reduced-motion: reduce) {
 	*,
 	::before,
