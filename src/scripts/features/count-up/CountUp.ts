@@ -1,4 +1,5 @@
 import { SCROLL_TRIGGER_BASE } from '@scripts/shared/config';
+import { animateReduceMotion } from '@scripts/shared/utils';
 import { CountUp as CountUpJS } from 'countup.js';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -18,16 +19,21 @@ class CountUp {
 		this.#itemsElements = this.#rootElement.querySelectorAll<HTMLElement>(this.#selectors.item);
 
 		this.#initCountUps();
-		this.#initAnimate();
 	}
 
 	#initCountUps = () => {
-		this.#itemsElements.forEach((element) => {
-			const countUpJs = new CountUpJS(element, null, {
-				duration: 3,
+		animateReduceMotion((isReduceMotion) => {
+			if (isReduceMotion) return false;
+
+			this.#itemsElements.forEach((element) => {
+				const countUpJs = new CountUpJS(element, null, {
+					duration: 3,
+				});
+
+				this.#countUps.push(countUpJs);
 			});
 
-			this.#countUps.push(countUpJs);
+			this.#initAnimate();
 		});
 	};
 
