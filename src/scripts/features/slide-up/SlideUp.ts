@@ -1,3 +1,4 @@
+import { animateReduceMotion } from '@scripts/shared/utils';
 import { gsap } from 'gsap';
 
 const rootSelector = '[data-js-animation-slide-up]';
@@ -18,11 +19,13 @@ class SlideUp {
 	}
 
 	#initAnimate = () => {
-		gsap.to(this.#itemsElements, {
-			y: 0,
-			opacity: 1,
-			duration: 1,
-			ease: 'power3.out',
+		animateReduceMotion((isReduceMotion) => {
+			gsap.to(this.#itemsElements, {
+				y: 0,
+				opacity: 1,
+				duration: isReduceMotion ? 0 : 1,
+				ease: 'power3.out',
+			});
 		});
 	};
 }

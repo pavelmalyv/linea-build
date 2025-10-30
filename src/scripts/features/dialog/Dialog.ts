@@ -1,4 +1,4 @@
-import { getElement } from '@scripts/shared/utils/element';
+import { getElement } from '@scripts/shared/utils';
 import SlDialog from '@shoelace-style/shoelace/dist/components/dialog/dialog.js';
 
 const rootButtonSelector = '[data-js-open-dialog-id]';

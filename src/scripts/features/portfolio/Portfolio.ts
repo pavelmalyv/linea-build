@@ -1,6 +1,6 @@
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
-import { getElement } from '@scripts/shared/utils/element';
+import { getElement } from '@scripts/shared/utils';
 
 const rootSelector = '[data-js-portfolio]';
 
